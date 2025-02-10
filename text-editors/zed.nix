@@ -17,11 +17,11 @@
       # ui_font_size = 16;
       # buffer_font_size = 16;
 
-      # theme = {
-      #   mode = "system";
-      #   light = "Gruvbox Light";
-      #   dark = "Ferra";
-      # };
+      theme = {
+        mode = "system";
+        light = "Gruvbox Light";
+        dark = "Ferra";
+      };
 
       features = {
         copilot = false;
