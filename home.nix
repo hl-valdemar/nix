@@ -11,7 +11,8 @@
 
   imports = [
     ./terminal-apps
-    ./text-editors
+    ./shells
     ./cli-utilities
+    ./text-editors
   ];
 }

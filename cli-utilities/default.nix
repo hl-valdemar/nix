@@ -9,5 +9,6 @@
     ./lazygit.nix
     ./ssh.nix
     ./zellij.nix
+    ./zoxide.nix
   ];
 }
