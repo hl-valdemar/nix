@@ -18,12 +18,13 @@
   outputs = inputs @ {
     self,
     nix-darwin,
+    nixpkgs,
     home-manager,
     nix-homebrew,
     mac-app-util,
   }: let
     # System configuration modules
-    systemConfig = {
+    systemConfig = {pkgs, ...}: {
       nixpkgs = {
         config.allowUnfree = true;
         hostPlatform = "aarch64-darwin";
@@ -76,7 +77,7 @@
     };
 
     # Homebrew configuration
-    homebrewConfig = {
+    homebrewConfig = {pkgs, ...}: {
       homebrew = {
         enable = true;
         brews = ["mas"];
