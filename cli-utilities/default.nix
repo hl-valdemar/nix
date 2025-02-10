@@ -1,7 +1,6 @@
-{
+{pkgs, ...}: {
   imports = [
     ./atuin.nix
-    ./bat.nix
     #./devenv.nix
     ./eza.nix
     ./fzf.nix
@@ -10,5 +9,10 @@
     ./ssh.nix
     ./zellij.nix
     ./zoxide.nix
+  ];
+
+  home.packages = with pkgs; [
+    bat
+    lazygit
   ];
 }
