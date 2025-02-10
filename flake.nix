@@ -113,9 +113,10 @@
         home-manager.darwinModules.home-manager
         {
           home-manager = {
+            extraSpecialArgs = {inherit inputs;};
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = {inherit inputs;};
+            backupFileExtension = "backup";
             users.valdemar = import ./home.nix;
           };
         }

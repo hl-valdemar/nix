@@ -22,6 +22,14 @@
         light = "Gruvbox Light";
         dark = "Ferra";
       };
+
+      assistant = {
+        enabled = true;
+        default_model = {
+          provider = "zed.dev";
+          model = "claude-3-5-sonnet-latest";
+        };
+      };
     };
 
     userKeymaps = [
