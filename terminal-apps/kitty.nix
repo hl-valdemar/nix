@@ -3,8 +3,13 @@
   config,
   ...
 }: {
-  xdg.configFile."kitty/themes/gruvbox-dark.conf" = {
-    source = ./kitty/themes/gruvbox-dark.conf;
+  xdg.configFile = {
+    "kitty/themes/gruvbox-dark.conf" = {
+      source = ./kitty/themes/gruvbox-dark.conf;
+    };
+    "kitty/themes/espresso.conf" = {
+      source = ./kitty/themes/espresso.conf;
+    };
   };
 
   programs.kitty = {
@@ -27,7 +32,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      include = "${config.xdg.configHome}/kitty/themes/gruvbox-dark.conf";
+      include = "${config.xdg.configHome}/kitty/themes/espresso.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;
