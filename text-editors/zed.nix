@@ -15,13 +15,30 @@
 
     userSettings = {
       vim_mode = true;
+
+      theme = {
+        mode = "system";
+        light = "Gruvbox Light";
+        dark = "Ferra";
+      };
     };
 
-    theme = {
-      mode = "system";
-      light = "Gruvbox Light";
-      dark = "Ferra";
-    };
+    userKeymaps = [
+      {
+        context = "Editor && vim_mode == normal";
+        bindings = {
+          g-r = "editor::Rename";
+        };
+      }
+      {
+        context = "ProjectPanel && not_editing";
+        bindings = {
+          a = "project_panel::NewFile";
+          r = "project_panel::Rename";
+          d = "project_panel::Delete";
+        };
+      }
+    ];
   };
 }
 #
@@ -65,22 +82,6 @@
 #     # wrap_guides = [90];
 #   };
 #
-#   userKeymaps = [
-#     {
-#       context = "Editor && vim_mode == normal";
-#       bindings = {
-#         g-r = "editor::Rename";
-#       };
-#     }
-#     {
-#       context = "ProjectPanel && not_editing";
-#       bindings = {
-#         a = "project_panel::NewFile";
-#         r = "project_panel::Rename";
-#         d = "project_panel::Delete";
-#       };
-#     }
-#   ];
 # };
 # }
 
