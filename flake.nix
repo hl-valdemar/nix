@@ -113,9 +113,17 @@
         {
           home-manager = {
             extraSpecialArgs = {inherit inputs;};
+
+            # To enable it for all users:
+            sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
+
             useGlobalPkgs = true;
             useUserPackages = true;
+
             backupFileExtension = "backup";
+
             users.valdemar = import ./home.nix;
           };
         }
