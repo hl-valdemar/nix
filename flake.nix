@@ -46,6 +46,8 @@
         name = "valdemar";
         home = "/Users/valdemar";
       };
+
+      nix.settings.trusted-users = ["root" "hl-valdemar"];
     };
 
     # Package management configuration
