@@ -14,5 +14,6 @@
     ./shells
     ./cli-utilities
     ./text-editors
+    ./messaging-apps
   ];
 }
