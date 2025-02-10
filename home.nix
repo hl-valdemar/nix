@@ -9,5 +9,6 @@
     ./cli-utilities
     ./text-editors
     ./messaging-apps
+    ./dev-tools
   ];
 }
