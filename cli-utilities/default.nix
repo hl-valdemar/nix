@@ -5,7 +5,6 @@
     ./eza.nix
     ./fzf.nix
     ./git.nix
-    ./lazygit.nix
     ./ssh.nix
     ./zellij.nix
     ./zoxide.nix
