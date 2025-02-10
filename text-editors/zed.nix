@@ -16,68 +16,71 @@
       vim_mode = true;
       # ui_font_size = 16;
       # buffer_font_size = 16;
-
-      theme = {
-        mode = "system";
-        light = "Gruvbox Light";
-        dark = "Ferra";
-      };
-
-      features = {
-        copilot = false;
-        inline_completion_provider = "none";
-      };
-
-      language_models = {
-        anthropic = {
-          available_models = [
-            {
-              name = "claude-3-5-sonnet-20241022";
-              display_name = "Claude 3.5 Sonnet (New)";
-              #max_tokens = 128000;
-              #max_output_tokens = 2560;
-              #cache_configuration = {
-              #  max_cache_anchors = 10;
-              #  min_total_token = 10000;
-              #  should_speculate = false;
-              #};
-            }
-          ];
-        };
-      };
-
-      assistant = {
-        enabled = true;
-        default_model = {
-          provider = "anthropic";
-          model = "claude-3-5-sonnet-20241022";
-        };
-        version = "2";
-        button = true;
-        default_width = 480;
-        dock = "right";
-      };
-
-      soft_wrap = "editor_width";
-      relative_line_numbers = true;
-      # wrap_guides = [90];
     };
-
-    userKeymaps = [
-      {
-        context = "Editor && vim_mode == normal";
-        bindings = {
-          g-r = "editor::Rename";
-        };
-      }
-      {
-        context = "ProjectPanel && not_editing";
-        bindings = {
-          a = "project_panel::NewFile";
-          r = "project_panel::Rename";
-          d = "project_panel::Delete";
-        };
-      }
-    ];
   };
 }
+#     theme = {
+#       mode = "system";
+#       light = "Gruvbox Light";
+#       dark = "Ferra";
+#     };
+#
+#     features = {
+#       copilot = false;
+#       inline_completion_provider = "none";
+#     };
+#
+#     language_models = {
+#       anthropic = {
+#         available_models = [
+#           {
+#             name = "claude-3-5-sonnet-20241022";
+#             display_name = "Claude 3.5 Sonnet (New)";
+#             #max_tokens = 128000;
+#             #max_output_tokens = 2560;
+#             #cache_configuration = {
+#             #  max_cache_anchors = 10;
+#             #  min_total_token = 10000;
+#             #  should_speculate = false;
+#             #};
+#           }
+#         ];
+#       };
+#     };
+#
+#     assistant = {
+#       enabled = true;
+#       default_model = {
+#         provider = "anthropic";
+#         model = "claude-3-5-sonnet-20241022";
+#       };
+#       version = "2";
+#       button = true;
+#       default_width = 480;
+#       dock = "right";
+#     };
+#
+#     soft_wrap = "editor_width";
+#     relative_line_numbers = true;
+#     # wrap_guides = [90];
+#   };
+#
+#   userKeymaps = [
+#     {
+#       context = "Editor && vim_mode == normal";
+#       bindings = {
+#         g-r = "editor::Rename";
+#       };
+#     }
+#     {
+#       context = "ProjectPanel && not_editing";
+#       bindings = {
+#         a = "project_panel::NewFile";
+#         r = "project_panel::Rename";
+#         d = "project_panel::Delete";
+#       };
+#     }
+#   ];
+# };
+# }
+
