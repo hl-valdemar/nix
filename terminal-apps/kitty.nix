@@ -26,12 +26,11 @@
       #include = "${config.xdg.configHome}/kitty/themes/ferra.conf";
 
       disable_ligatures = "always";
-
       allow_remote_control = true;
-      #hide_window_decorations = true;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       update_check_interval = 24;
+      macos_option_as_alt = "left";
     };
   };
 }
