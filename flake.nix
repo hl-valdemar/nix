@@ -7,11 +7,15 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, mac-app-util }:
     let
       # System configuration modules
       systemConfig = { pkgs, ... }: {
@@ -31,6 +35,11 @@
             softwareupdate --install-rosetta --agree-to-license
           '';
         };
+
+	users.users.valdemar = {
+	  name = "valdemar";
+	  home = "/Users/valdemar";
+	};
       };
 
       # Package management configuration
@@ -85,7 +94,6 @@
           user = "valdemar";
         };
       };
-
     in {
       darwinConfigurations."macOS" = nix-darwin.lib.darwinSystem {
         modules = [
@@ -95,6 +103,15 @@
           homebrewConfig
           mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
+          home-manager.darwinModules.default
+          home-manager.darwinModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.valdemar = import ./home.nix;
+            };
+          }
         ];
       };
     };

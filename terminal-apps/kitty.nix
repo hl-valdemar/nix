@@ -1,0 +1,37 @@
+{pkgs, ...}: {
+  # xdg.configFile."kitty/themes/ferra.conf" = {
+  #   source = ./kitty/themes/ferra.conf;
+  # };
+
+  programs.kitty = {
+    enable = true;
+
+    shellIntegration.enableZshIntegration = true;
+
+    font = {
+      name = "Hack Nerd Font";
+      size = 14;
+    };
+
+    keybindings = {
+      "ctrl+equal" = "change_font_size all +1";
+      "ctrl+minus" = "change_font_size all -1";
+      "ctrl+backspace" = "change_font_size all 0";
+    };
+
+    settings = {
+      shell = "${pkgs.zsh}/bin/zsh";
+      editor = "${pkgs.neovim}/bin/nvim";
+
+      #include = "${config.xdg.configHome}/kitty/themes/ferra.conf";
+
+      disable_ligatures = "always";
+
+      allow_remote_control = true;
+      #hide_window_decorations = true;
+      scrollback_lines = 10000;
+      enable_audio_bell = false;
+      update_check_interval = 24;
+    };
+  };
+}
