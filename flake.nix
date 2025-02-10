@@ -31,6 +31,7 @@
       };
 
       nix.settings.experimental-features = "nix-command flakes";
+      nix.settings.trusted-users = ["root" "valdemar"];
 
       system = {
         configurationRevision = self.rev or self.dirtyRev or null;
@@ -46,8 +47,6 @@
         name = "valdemar";
         home = "/Users/valdemar";
       };
-
-      nix.settings.trusted-users = ["root" "hl-valdemar"];
     };
 
     # Package management configuration
