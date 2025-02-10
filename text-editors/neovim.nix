@@ -152,9 +152,6 @@
       -- Make the undotree persist across sessions
       vim.o.undofile = true
       vim.o.undodir = "${config.xdg.dataHome}/nvim/undodir"
-
-      -- Set the color scheme
-      vim.cmd("colorscheme gruvbox-material-medium")
     '';
   };
 }

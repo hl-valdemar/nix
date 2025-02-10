@@ -1,7 +1,11 @@
-{pkgs, ...}: {
-  # xdg.configFile."kitty/themes/ferra.conf" = {
-  #   source = ./kitty/themes/ferra.conf;
-  # };
+{
+  pkgs,
+  config,
+  ...
+}: {
+  xdg.configFile."kitty/themes/ferra.conf" = {
+    source = ./kitty/themes/ferra.conf;
+  };
 
   programs.kitty = {
     enable = true;
@@ -23,7 +27,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      #include = "${config.xdg.configHome}/kitty/themes/ferra.conf";
+      include = "${config.xdg.configHome}/kitty/themes/ferra.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;

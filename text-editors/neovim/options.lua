@@ -29,3 +29,6 @@ vim.o.mouse = "a"
 
 -- Disable swap files!
 vim.o.swapfile = false
+
+-- Set the color scheme
+vim.cmd("colorscheme gruvbox-material")
