@@ -7,10 +7,11 @@
     enable = true;
 
     extensions = [
+      "gruvbox-material"
       "nix"
       "zig"
       "svelte"
-      "gruvbox-material"
+      "toml"
     ];
 
     userSettings = {
@@ -27,7 +28,7 @@
       {
         context = "Editor && vim_mode == normal";
         bindings = {
-          g-r = "editor::Rename";
+          "g r" = "editor::Rename";
         };
       }
       {
