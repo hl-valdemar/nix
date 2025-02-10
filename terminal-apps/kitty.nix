@@ -3,8 +3,8 @@
   config,
   ...
 }: {
-  xdg.configFile."kitty/themes/ferra.conf" = {
-    source = ./kitty/themes/ferra.conf;
+  xdg.configFile."kitty/themes/gruvbox-dark.conf" = {
+    source = ./kitty/themes/gruvbox-dark.conf;
   };
 
   programs.kitty = {
@@ -27,7 +27,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      include = "${config.xdg.configHome}/kitty/themes/ferra.conf";
+      include = "${config.xdg.configHome}/kitty/themes/gruvbox-dark.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;
