@@ -13,5 +13,7 @@
   home.packages = with pkgs; [
     bat
     lazygit
+    ripgrep
+    fd
   ];
 }
