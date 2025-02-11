@@ -5,6 +5,7 @@
     casks = ["brave-browser"];
     masApps = {
       "Craft" = 1487937127;
+      "Perplexity" = 6714467650;
     };
     onActivation = {
       cleanup = "zap";
