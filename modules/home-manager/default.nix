@@ -6,6 +6,5 @@
     ./text-editors
     ./messaging-apps
     ./dev-tools
-    ./browsers
   ];
 }
