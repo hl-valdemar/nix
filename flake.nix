@@ -50,17 +50,7 @@
     };
 
     # Package management configuration
-    packagesConfig = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [
-        neovim
-        mkalias
-        devenv
-      ];
-
-      fonts.packages = with pkgs; [
-        nerd-fonts.hack
-      ];
-    };
+    packagesConfig = import ./modules/system;
 
     # macOS system defaults configuration
     macosConfig = {

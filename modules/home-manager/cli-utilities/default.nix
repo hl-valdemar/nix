@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./atuin.nix
-    #./devenv.nix
     ./eza.nix
     ./fzf.nix
     ./git.nix
