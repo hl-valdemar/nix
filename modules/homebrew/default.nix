@@ -2,7 +2,7 @@
   homebrew = {
     enable = true;
     brews = ["mas"];
-    casks = ["firefox"];
+    casks = ["brave-browser"];
     masApps = {
       "Craft" = 1487937127;
     };
