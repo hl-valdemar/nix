@@ -2,7 +2,7 @@
   homebrew = {
     enable = true;
     brews = ["mas"];
-    casks = [];
+    casks = ["firefox"];
     masApps = {
       "Craft" = 1487937127;
     };
