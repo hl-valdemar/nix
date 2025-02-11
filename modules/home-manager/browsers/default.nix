@@ -2,6 +2,6 @@
   imports = [];
 
   home.packages = with pkgs; [
-    firefox-bin
+    firefox
   ];
 }
