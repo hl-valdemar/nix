@@ -1,6 +1,13 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    typst
     nixd
+
+    typst
+
+    zig
+    zls
+
+    rust
+    rust-analyzer
   ];
 }
