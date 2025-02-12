@@ -7,7 +7,7 @@
     zig
     zls
 
-    rust
-    rust-analyzer
+    # rust
+    # rust-analyzer
   ];
 }
