@@ -10,6 +10,8 @@
     go
     gofumpt
 
+    jdk
+
     # rust
     # rust-analyzer
   ];

@@ -3,7 +3,7 @@
     neovim
     mkalias
     devenv
-    jdk
+    jre
   ];
 
   fonts.packages = with pkgs; [
