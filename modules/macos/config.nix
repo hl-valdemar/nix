@@ -5,9 +5,9 @@
       persistent-apps = [
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
-        "/System/Applications/Claude.app"
-        "/System/Applications/ChatGPT.app"
-        "/System/Applications/Perplexity.app"
+        "/Applications/Claude.app"
+        "/Applications/ChatGPT.app"
+        "/Applications/Perplexity.app"
       ];
     };
     loginwindow.GuestEnabled = false;
