@@ -12,9 +12,6 @@
 
     jdk
 
-    nil
-
-    # rust
-    # rust-analyzer
+    nil # For the Zed editor
   ];
 }
