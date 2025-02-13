@@ -11,7 +11,5 @@
     gofumpt
 
     jdk
-
-    nil # For the Zed editor
   ];
 }

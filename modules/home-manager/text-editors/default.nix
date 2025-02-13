@@ -1,6 +1,6 @@
 {
   imports = [
     ./neovim.nix
-    # ./zed.nix
+    ./zed.nix
   ];
 }
