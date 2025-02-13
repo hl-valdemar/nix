@@ -5,6 +5,7 @@
     devenv
     jre
     dotnet-runtime
+    dotnet-runtime_7
   ];
 
   fonts.packages = with pkgs; [

@@ -26,8 +26,12 @@
     # System configuration modules
     systemConfig = {
       nixpkgs = {
-        config.allowUnfree = true;
         hostPlatform = "aarch64-darwin";
+
+        config.allowUnfree = true;
+        config.permittedInsecurePackages = [
+          "dotnet-runtime-7.0.20"
+        ];
       };
 
       nix.settings.experimental-features = "nix-command flakes";
