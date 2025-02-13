@@ -12,6 +12,8 @@
 
     jdk
 
+    nil
+
     # rust
     # rust-analyzer
   ];
