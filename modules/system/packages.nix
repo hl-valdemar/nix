@@ -3,6 +3,7 @@
     neovim
     mkalias
     devenv
+    libqalculate
     jre
     dotnet-runtime
   ];
