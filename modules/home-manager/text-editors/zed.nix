@@ -7,6 +7,7 @@
     # Formatters
     nil
     black
+    ruff
   ];
 
   # I can't figure out a good way to configure Zed through Nix, as Zed in many cases requires writable config files...
