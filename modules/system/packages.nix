@@ -6,6 +6,7 @@
     libqalculate
     jre
     dotnet-runtime
+    glibc
   ];
 
   fonts.packages = with pkgs; [
