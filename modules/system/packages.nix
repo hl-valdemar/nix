@@ -6,7 +6,6 @@
     libqalculate
     jre
     dotnet-runtime
-    sokol
   ];
 
   fonts.packages = with pkgs; [
