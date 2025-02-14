@@ -3,7 +3,10 @@
     enable = true;
 
     brews = ["mas"];
-    casks = ["brave-browser"];
+    casks = [
+      "brave-browser"
+      "signal"
+    ];
 
     masApps = {
       "Craft" = 1487937127;
