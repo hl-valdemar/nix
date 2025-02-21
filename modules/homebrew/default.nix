@@ -2,7 +2,10 @@
   homebrew = {
     enable = true;
 
-    brews = ["mas"];
+    brews = [
+      "mas"
+      "zathura"
+    ];
     casks = [
       "brave-browser"
       "signal"
