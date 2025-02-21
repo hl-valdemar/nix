@@ -4,7 +4,6 @@
 
     brews = [
       "mas"
-      "zathura"
     ];
     casks = [
       "brave-browser"
