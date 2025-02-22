@@ -4,6 +4,7 @@
     options = {
       scroll-step = 1;
       scroll-hstep = 1;
+      selection-clipboard = "clipboard";
     };
   };
 }
