@@ -7,7 +7,7 @@
     zig
     zls
 
-    rust
+    cargo
     rust-analyzer
 
     go
