@@ -7,6 +7,9 @@
     zig
     zls
 
+    rust
+    rust-analyzer
+
     go
     gofumpt
 
