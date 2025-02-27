@@ -16,5 +16,8 @@
     gofumpt
 
     jdk
+
+    raylib
+    raygui
   ];
 }
