@@ -7,6 +7,8 @@
     zig
     zls
 
+    cmake
+
     cargo
     rust-analyzer
 
