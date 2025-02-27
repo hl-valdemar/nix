@@ -10,6 +10,9 @@
     "kitty/themes/espresso.conf" = {
       source = ./kitty/themes/espresso.conf;
     };
+    "kitty/themes/everforest.conf" = {
+      source = ./kitty/themes/everforest.conf;
+    };
   };
 
   programs.kitty = {
@@ -32,7 +35,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      include = "${config.xdg.configHome}/kitty/themes/espresso.conf";
+      include = "${config.xdg.configHome}/kitty/themes/everforest.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;

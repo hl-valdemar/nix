@@ -11,7 +11,7 @@
     enableBashIntegration = false;
 
     settings = {
-      theme = "gruvbox-dark";
+      theme = "everforest-dark";
     };
   };
 }

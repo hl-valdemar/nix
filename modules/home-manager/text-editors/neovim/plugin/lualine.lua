@@ -1,7 +1,7 @@
-require('lualine').setup {
-  options = {
-    theme = "gruvbox-material",
-    component_separators = '',
-    section_separators = { left = '', right = '' },
-  },
-}
+require("lualine").setup({
+	options = {
+		theme = "everforest",
+		component_separators = "",
+		section_separators = { left = "", right = "" },
+	},
+})

@@ -31,4 +31,4 @@ vim.o.mouse = "a"
 vim.o.swapfile = false
 
 -- Set the color scheme
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme everforest")
