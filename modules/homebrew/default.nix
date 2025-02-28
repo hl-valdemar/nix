@@ -8,6 +8,7 @@
     casks = [
       "brave-browser"
       "signal"
+      "raycast"
     ];
 
     masApps = {
