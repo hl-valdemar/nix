@@ -32,3 +32,11 @@ vim.o.swapfile = false
 
 -- Set the color scheme
 vim.cmd("colorscheme everforest")
+
+-- Enable background transparency
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]])
