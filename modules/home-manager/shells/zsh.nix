@@ -1,7 +1,6 @@
-{pkgs, ...}: {
+{...}: {
   programs.zsh = {
     enable = true;
-    # enableCompletion = true;
     syntaxHighlighting.enable = true;
 
     dotDir = ".config/zsh";
@@ -10,26 +9,6 @@
       path = "$HOME/.cache/zsh/history";
       size = 10000;
     };
-
-    # plugins = [
-    #   {
-    #     name = "zsh-autosuggestions";
-    #     src = pkgs.zsh-autosuggestions;
-    #   }
-    #   {
-    #     name = "zsh-syntax-highlighting";
-    #     src = pkgs.zsh-syntax-highlighting;
-    #   }
-    #   {
-    #     name = "fast-syntax-highlighting";
-    #     src = pkgs.fetchFromGitHub {
-    #       owner = "zdharma-continuum";
-    #       repo = "fast-syntax-highlighting";
-    #       rev = "v1.55";
-    #       sha256 = "sha256-DWVFBoICroKaKgByLmDEo4O+xo6eA8YO792g8t8R7kA=";
-    #     };
-    #   }
-    # ];
 
     shellAliases = {
       # SHELL TOOLS
@@ -54,116 +33,67 @@
 
     # This is using a rec (recursive) expression to set and access XDG_BIN_HOME within the expression
     # For more on rec expressions see https://nix.dev/tutorials/first-steps/nix-language#recursive-attribute-set-rec
-    sessionVariables = {
-      # CTRL+E(dit) : fuzzy search for files to open in $EDITOR
-      # FZF_FINDER_EDITOR_BINDKEY = "^e";
-      # ALT+R(ead) : fuzzy search for files to open with default pager
-      # FZF_FINDER_PAGER_BINDKEY = "^[r";
-      # make fzf finder plugin search hidden files too
-      # FZF_FINDER_FD_OPTS = "--hidden -t f";
-      # print path before cd'ing for zoxide
-      _ZO_ECHO = 0;
-      # Prevent zinit from trying to copy the man page (which currently fails)
-      ZINIT_NO_MANPAGE = 1;
-    };
+    # sessionVariables = {
+    #   # CTRL+E(dit) : fuzzy search for files to open in $EDITOR
+    #   # FZF_FINDER_EDITOR_BINDKEY = "^e";
+    #   # ALT+R(ead) : fuzzy search for files to open with default pager
+    #   # FZF_FINDER_PAGER_BINDKEY = "^[r";
+    #   # make fzf finder plugin search hidden files too
+    #   # FZF_FINDER_FD_OPTS = "--hidden -t f";
+    #   # print path before cd'ing for zoxide
+    #   _ZO_ECHO = 0;
+    #   # Prevent zinit from trying to copy the man page (which currently fails)
+    #   ZINIT_NO_MANPAGE = 1;
+    # };
 
-    # # set some zsh options
-    # # autocd = cd into into directories without typing cd
-    # # extendedglob = enable advanced globbing
-    # # nomatch = don't throw an error if a glob doesn't match
-    # # notify = notify when a job completes
-    # # unset beep = disable the bell sound
-    # # then init zinit and load plugins
-    # initExtraBeforeCompInit = ''
-    # '';
-    #
     # completionInit = ''
     #   autoload -Uz compinit
     #   compinit
     #   zinit cdreplay -q
     # '';
-    #
-    # initExtra = ''
-    #   if [[ -f ~/.secrets ]]; then
-    #     source ~/.secrets
-    #   fi
-    #   if [[ -f ~/.profile ]]; then
-    #     source ~/.profile
-    #   fi
-    #
-    #   # Eza colors
-    #   #export EZA_COLORS="\
-    #   #di=38;2;177;182;207:\
-    #   #fi=38;2;254;205;178:\
-    #   #ex=38;2;232;140;111:\
-    #   #ln=38;2;246;182;201:\
-    #   #or=38;2;192;88;98:\
-    #   #ur=38;2;254;205;178:\
-    #   #uw=38;2;192;88;98:\
-    #   #ux=38;2;232;140;111:\
-    #   #ue=38;2;246;182;201:\
-    #   #gr=38;2;177;182;207:\
-    #   #gw=38;2;192;88;98:\
-    #   #gx=38;2;232;140;111:\
-    #   #tr=38;2;177;182;207:\
-    #   #tw=38;2;192;88;98:\
-    #   #tx=38;2;232;140;111:\
-    #   #da=38;2;245;215;110:\
-    #   #nb=38;2;254;205;178:\
-    #   #nk=38;2;246;182;201:\
-    #   #ga=38;2;177;182;207:\
-    #   #gm=38;2;192;88;98:\
-    #   #gd=38;2;232;140;111:\
-    #   #gv=38;2;246;182;201:\
-    #   #sn=38;2;177;182;207:\
-    #   #tc=38;2;177;182;207;48;2;43;41;45:\
-    #   #*=38;2;254;205;178;48;2;43;41;45"
-    #
-    #   # Vi mode
-    #   bindkey -v
-    #   export KEYTIMEOUT=1
-    #
-    #   # Use vim keys in tab complete menu:
-    #   bindkey -M menuselect 'h' vi-backward-char
-    #   bindkey -M menuselect 'k' vi-up-line-or-history
-    #   bindkey -M menuselect 'l' vi-forward-char
-    #   bindkey -M menuselect 'j' vi-down-line-or-history
-    #   bindkey -v '^?' backward-delete-char
-    #
-    #   # CTRL+E(dit) : fuzzy search for files to open in $EDITOR
-    #   export FZF_FINDER_EDITOR_BINDKEY='^E'
-    #   # CTRL+R(ead) : fuzzy search for files to open with default pager
-    #   export FZF_FINDER_PAGER_BINDKEY='^P'
-    #   # make fzf finder plugin search hidden files too
-    #   export FZF_FINDER_FD_OPTS='--hidden -t f'
-    #   # print path before cd'ing for zoxide
-    #   export _ZO_ECHO=0
-    #   # Prevent zinit from trying to copy the man page (which currently fails)
-    #   export ZINIT_NO_MANPAGE=1
-    #
-    #   # Use CTRL+D to enter devenv defined shell
-    #   bindkey -s '^S' 'devenv shell\n'
-    #
-    #   # Change cursor shape for different vi modes.
-    #   function zle-keymap-select {
-    #     if [[ ''${KEYMAP} == vicmd ]] ||
-    #        [[ $1 = 'block' ]]; then
-    #       echo -ne '\e[1 q'
-    #     elif [[ ''${KEYMAP} == main ]] ||
-    #          [[ ''${KEYMAP} == viins ]] ||
-    #          [[ ''${KEYMAP} = "" ]] ||
-    #          [[ $1 = 'beam' ]]; then
-    #       echo -ne '\e[5 q'
-    #     fi
-    #   }
-    #   zle -N zle-keymap-select
-    #   zle-line-init() {
-    #       zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    #       echo -ne "\e[5 q"
-    #   }
-    #   zle -N zle-line-init
-    #   echo -ne '\e[5 q' # Use beam shape cursor on startup.
-    #   preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-    # '';
+
+    initExtra = ''
+      if [[ -f ~/.secrets ]]; then
+        source ~/.secrets
+      fi
+      if [[ -f ~/.profile ]]; then
+        source ~/.profile
+      fi
+
+      # Vi mode
+      bindkey -v
+      export KEYTIMEOUT=1
+
+      # Use vim keys in tab complete menu:
+      bindkey -M menuselect 'h' vi-backward-char
+      bindkey -M menuselect 'k' vi-up-line-or-history
+      bindkey -M menuselect 'l' vi-forward-char
+      bindkey -M menuselect 'j' vi-down-line-or-history
+      bindkey -v '^?' backward-delete-char
+
+      # Use CTRL+D to enter devenv defined shell
+      bindkey -s '^S' 'devenv shell\n'
+
+      # Change cursor shape for different vi modes.
+      function zle-keymap-select {
+        if [[ ''${KEYMAP} == vicmd ]] ||
+           [[ $1 = 'block' ]]; then
+          echo -ne '\e[1 q'
+        elif [[ ''${KEYMAP} == main ]] ||
+             [[ ''${KEYMAP} == viins ]] ||
+             [[ ''${KEYMAP} = "" ]] ||
+             [[ $1 = 'beam' ]]; then
+          echo -ne '\e[5 q'
+        fi
+      }
+      zle -N zle-keymap-select
+      zle-line-init() {
+          zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+          echo -ne "\e[5 q"
+      }
+      zle -N zle-line-init
+      echo -ne '\e[5 q' # Use beam shape cursor on startup.
+      preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+    '';
   };
 }
