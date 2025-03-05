@@ -19,5 +19,8 @@
 
     raylib
     raygui
+
+    docker
+    docker-compose
   ];
 }
