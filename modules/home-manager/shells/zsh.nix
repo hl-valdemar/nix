@@ -33,18 +33,18 @@
 
     # This is using a rec (recursive) expression to set and access XDG_BIN_HOME within the expression
     # For more on rec expressions see https://nix.dev/tutorials/first-steps/nix-language#recursive-attribute-set-rec
-    # sessionVariables = {
-    #   # CTRL+E(dit) : fuzzy search for files to open in $EDITOR
-    #   # FZF_FINDER_EDITOR_BINDKEY = "^e";
-    #   # ALT+R(ead) : fuzzy search for files to open with default pager
-    #   # FZF_FINDER_PAGER_BINDKEY = "^[r";
-    #   # make fzf finder plugin search hidden files too
-    #   # FZF_FINDER_FD_OPTS = "--hidden -t f";
-    #   # print path before cd'ing for zoxide
-    #   _ZO_ECHO = 0;
-    #   # Prevent zinit from trying to copy the man page (which currently fails)
-    #   ZINIT_NO_MANPAGE = 1;
-    # };
+    sessionVariables = {
+      # CTRL+E(dit) : fuzzy search for files to open in $EDITOR
+      # FZF_FINDER_EDITOR_BINDKEY = "^e";
+      # ALT+R(ead) : fuzzy search for files to open with default pager
+      # FZF_FINDER_PAGER_BINDKEY = "^[r";
+      # make fzf finder plugin search hidden files too
+      # FZF_FINDER_FD_OPTS = "--hidden -t f";
+      # print path before cd'ing for zoxide
+      _ZO_ECHO = 0;
+      # Prevent zinit from trying to copy the man page (which currently fails)
+      ZINIT_NO_MANPAGE = 1;
+    };
 
     # completionInit = ''
     #   autoload -Uz compinit
