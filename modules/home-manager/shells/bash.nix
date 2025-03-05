@@ -1,7 +1,8 @@
 {
   programs.bash = {
     enable = true;
-    enableCompletion = true;
+    # enableLsColors = true;
+    # enableCompletion = true;
 
     shellAliases = {
       # SHELL TOOLS
