@@ -136,7 +136,6 @@
           p.tree-sitter-typst
           p.tree-sitter-markdown
           p.tree-sitter-glsl
-          p.tree-sitter-metal
         ]);
         config = toLuaFile ./neovim/plugin/treesitter.lua;
       }
