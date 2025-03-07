@@ -42,3 +42,9 @@ vim.cmd([[
     highlight NonText ctermbg=none
     highlight NormalNC ctermbg=none
 ]])
+
+-- Syntax highlighting for MQL5
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = "*.mq5",
+	command = "set filetype=cpp",
+})
