@@ -11,7 +11,7 @@ local on_attach = function(_, bufnr)
 	bufmap("gD", vim.lsp.buf.declaration)
 	bufmap("gI", vim.lsp.buf.implementation)
 
-	bufmap("<leader>d", vim.lsp.diagnostic.open_float)
+	bufmap("<leader>d", vim.diagnostic.open_float)
 
 	bufmap("gr", require("telescope.builtin").lsp_references)
 
@@ -183,4 +183,7 @@ require("lspconfig").pyright.setup({
 	},
 })
 
-require("lspconfig").clangd.setup({})
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
