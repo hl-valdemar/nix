@@ -52,7 +52,6 @@
     plugins = with pkgs.vimPlugins; [
       nvim-ts-context-commentstring
       neodev-nvim
-      nvim-cmp
       telescope-fzf-native-nvim
       cmp_luasnip
       cmp-nvim-lsp
@@ -145,6 +144,19 @@
       {
         plugin = fromGitHub "echasnovski/mini.surround" "main" "aa5e245829dd12d8ff0c96ef11da28681d6049aa";
         config = toLuaFile ./neovim/plugin/mini-surround.lua;
+      }
+
+      gitsigns-nvim
+      which-key-nvim
+      indent-blankline-nvim
+      harpoon
+      hop-nvim
+      fidget-nvim
+      vim-gitgutter
+      neomake
+
+      {
+        plugin = fromGitHub "2nthony/vitesse.nvim" "main" "1e00ee10a7ac23426684f43be80eb3edf92c082c";
       }
     ];
 

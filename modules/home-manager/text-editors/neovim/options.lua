@@ -31,7 +31,8 @@ vim.o.mouse = "a"
 vim.o.swapfile = false
 
 -- Set the color scheme
-vim.cmd("colorscheme everforest")
+-- vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme vitesse")
 
 -- Enable background transparency
 vim.cmd([[

@@ -9,6 +9,7 @@
       "brave-browser"
       "signal"
       "raycast"
+      "docker"
     ];
 
     masApps = {
