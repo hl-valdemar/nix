@@ -32,7 +32,11 @@ vim.o.swapfile = false
 
 -- Set the color scheme
 -- vim.cmd("colorscheme everforest")
-vim.cmd("colorscheme vitesse")
+require("vitesse").setup({
+	-- Your options
+	transparent = true,
+	italic_comments = true,
+})
 
 -- Enable background transparency
 vim.cmd([[
