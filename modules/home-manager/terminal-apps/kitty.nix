@@ -47,7 +47,7 @@
       update_check_interval = 24;
       macos_option_as_alt = "left";
 
-      background_opacity = 0.92;
+      background_opacity = 0.82;
       background_blur = 50;
     };
   };
