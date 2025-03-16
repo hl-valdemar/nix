@@ -34,19 +34,19 @@ vim.o.swapfile = false
 -- vim.cmd("colorscheme everforest")
 require("vitesse").setup({
 	-- Your options
-	transparent = true,
-	italic_comments = true,
+	transparent = false,
+	italic_comments = false,
 })
 
 -- Enable background transparency
-vim.cmd([[
-    highlight Normal guibg=none
-    highlight NonText guibg=none
-    highlight NormalNC guibg=none
-    highlight Normal ctermbg=none
-    highlight NonText ctermbg=none
-    highlight NormalNC ctermbg=none
-]])
+--vim.cmd([[
+--    highlight Normal guibg=none
+--    highlight NonText guibg=none
+--    highlight NormalNC guibg=none
+--    highlight Normal ctermbg=none
+--    highlight NonText ctermbg=none
+--    highlight NormalNC ctermbg=none
+--]])
 
 -- Syntax highlighting for MQL5
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
