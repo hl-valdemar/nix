@@ -13,6 +13,9 @@
     "kitty/themes/everforest.conf" = {
       source = ./kitty/themes/everforest.conf;
     };
+    "kitty/themes/vitesse-black.conf" = {
+      source = ./kitty/themes/vitesse-black.conf;
+    };
   };
 
   programs.kitty = {
@@ -35,7 +38,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      include = "${config.xdg.configHome}/kitty/themes/everforest.conf";
+      include = "${config.xdg.configHome}/kitty/themes/vitesse-black.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;

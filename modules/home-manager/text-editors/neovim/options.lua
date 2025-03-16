@@ -34,7 +34,7 @@ vim.o.swapfile = false
 -- vim.cmd("colorscheme everforest")
 require("vitesse").setup({
 	-- Your options
-	transparent = false,
+	transparent = true,
 	italic_comments = false,
 })
 

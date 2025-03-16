@@ -13,9 +13,7 @@ M.options = {
 M.colors = {
 	-- Base colors
 	bg = "#121212", -- CORRECTED
-	-- fg = "#666666",
-	-- fg = "#677568", -- CORRECTED
-	fg = "#bd976a",
+	fg = "#bd976a", -- CORRECTED
 
 	-- Normal colors
 	black = "#666666", -- CORRECTED
@@ -157,7 +155,7 @@ function M.load()
 		Typedef = { fg = c.invalid_fg },
 
 		Special = { fg = c.bright_red }, -- GOOD
-		SpecialChar = { fg = c.invalid_fg },
+		SpecialChar = { fg = c.green },
 		Tag = { fg = c.invalid_fg },
 		Delimiter = { fg = c.black },
 		SpecialComment = { fg = c.comment, italic = o.italic_comments }, -- GOOD
