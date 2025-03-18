@@ -16,6 +16,9 @@
     "kitty/themes/vitesse-black.conf" = {
       source = ./kitty/themes/vitesse-black.conf;
     };
+    "kitty/themes/vitesse-dark.conf" = {
+      source = ./kitty/themes/vitesse-dark.conf;
+    };
   };
 
   programs.kitty = {
@@ -38,7 +41,7 @@
       shell = "${pkgs.zsh}/bin/zsh";
       editor = "${pkgs.neovim}/bin/nvim";
 
-      include = "${config.xdg.configHome}/kitty/themes/vitesse-black.conf";
+      include = "${config.xdg.configHome}/kitty/themes/vitesse-dark.conf";
 
       disable_ligatures = "always";
       allow_remote_control = true;
