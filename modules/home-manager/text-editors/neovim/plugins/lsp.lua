@@ -1,3 +1,29 @@
+-- Specify how the border looks like
+local border = {
+	{ "┌", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "┐", "FloatBorder" },
+	{ "│", "FloatBorder" },
+	{ "┘", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "└", "FloatBorder" },
+	{ "│", "FloatBorder" },
+}
+
+-- Add border to the diagnostic popup window
+vim.diagnostic.config({
+	-- virtual_text = {
+	-- 	prefix = "■ ", -- Could be '●', '▎', 'x', '■', , 
+	-- },
+	float = { border = border },
+})
+
+-- Add the border on hover and on signature help popup window
+local handlers = {
+	["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+	["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+}
+
 local on_attach = function(_, bufnr)
 	local bufmap = function(keys, func)
 		vim.keymap.set("n", keys, func, { buffer = bufnr })
@@ -30,6 +56,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 require("neodev").setup() -- NOTE: should probably switch over to lazydev.nvim (https://github.com/folke/lazydev.nvim)
 require("lspconfig").lua_ls.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = function()
@@ -80,6 +107,7 @@ require("lspconfig").gopls.setup({
 })
 
 require("lspconfig").zls.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "zls" },

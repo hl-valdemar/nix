@@ -1,4 +1,16 @@
+-- { "┌", "FloatBorder" },
+-- { "─", "FloatBorder" },
+-- { "┐", "FloatBorder" },
+-- { "│", "FloatBorder" },
+-- { "┘", "FloatBorder" },
+-- { "─", "FloatBorder" },
+-- { "└", "FloatBorder" },
+-- { "│", "FloatBorder" },
+
 require("telescope").setup({
+	defaults = {
+		borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+	},
 	pickers = {
 		colorscheme = {
 			enable_preview = true,
