@@ -134,6 +134,7 @@ function M.load()
 
 		Identifier = { fg = c.bright_yellow }, -- GOOD
 		Function = { fg = c.green }, -- GOOD
+		Constant = { fg = c.bright_yellow }, -- GOOD
 
 		Statement = { fg = c.red },
 		Conditional = { fg = c.cyan, bold = o.bold_keywords }, -- GOOD
