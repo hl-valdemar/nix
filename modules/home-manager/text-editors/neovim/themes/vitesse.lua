@@ -155,7 +155,7 @@ function M.load()
 		Structure = { fg = c.yellow }, -- GOOD
 		Typedef = { fg = c.invalid_fg },
 
-		Special = { fg = c.bright_red }, -- GOOD
+		Special = { fg = c.cyan }, -- GOOD
 		SpecialChar = { fg = c.green },
 		Tag = { fg = c.invalid_fg },
 		Delimiter = { fg = c.black },
