@@ -11,7 +11,8 @@
     enableBashIntegration = false;
 
     settings = {
-      theme = "everforest-dark";
+      # theme = "everforest-dark";
+      theme = "vesper";
     };
   };
 }
