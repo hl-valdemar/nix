@@ -29,6 +29,6 @@
     enable = true;
     enableRosetta = true;
     user = "valdemar";
-    mutableTaps = false;
+    # mutableTaps = false;
   };
 }
