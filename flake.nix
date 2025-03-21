@@ -3,15 +3,22 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
     nix-darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    homebrew-core.url = "github:homebrew/homebrew-core";
+    homebrew-cask.url = "github:homebrew/homebrew-cask";
+    homebrew-bundle.url = "github:homebrew/homebrew-bundle";
+
     mac-app-util.url = "github:hraban/mac-app-util";
   };
 
