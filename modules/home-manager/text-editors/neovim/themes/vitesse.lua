@@ -147,7 +147,7 @@ function M.load()
 		PreProc = { fg = c.green }, -- GOOD
 		Include = { fg = c.invalid_fg },
 		Define = { fg = c.invalid_fg },
-		Macro = { fg = c.invalid_fg },
+		Macro = { fg = c.cyan },
 		PreCondit = { fg = c.invalid_fg },
 
 		Type = { fg = c.bright_cyan }, -- GOOD
