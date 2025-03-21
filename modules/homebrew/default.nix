@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   homebrew = {
     enable = true;
 
@@ -20,7 +20,7 @@
 
     onActivation = {
       cleanup = "zap";
-      # autoUpdate = true; # disabled as it can conflict with nix’s declarative management
+      autoUpdate = true;
       upgrade = true;
     };
   };
@@ -29,11 +29,6 @@
     enable = true;
     enableRosetta = true;
     user = "valdemar";
-    taps = {
-      "homebrew/homebrew-core" = inputs.homebrew-core;
-      "homebrew/homebrew-cask" = inputs.homebrew-cask;
-      "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
-    };
     mutableTaps = false;
   };
 }
