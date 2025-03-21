@@ -15,7 +15,7 @@
     };
 
     # nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
+    nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
 
     mac-app-util.url = "github:hraban/mac-app-util";
   };
@@ -61,7 +61,7 @@
     macosConfig = import ./modules/macos/config.nix;
 
     # Homebrew configuration
-    homebrewConfig = import ./modules/homebrew {inherit inputs;};
+    homebrewConfig = import ./modules/homebrew;
   in {
     darwinConfigurations."macOS" = nix-darwin.lib.darwinSystem {
       modules = [
