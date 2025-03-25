@@ -1,11 +1,11 @@
--- Set the leader key
+-- set the leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Use the system clipboard
+-- use the system clipboard
 vim.o.clipboard = "unnamedplus"
 
--- Set line numbers in the gutter
+-- set line numbers in the gutter
 vim.o.number = true
 vim.o.relativenumber = true
 
@@ -18,19 +18,22 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
--- Refresh time in millis
+-- refresh time in millis
 vim.o.updatetime = 300
 
 -- enable 24-bit colour
 vim.o.termguicolors = true
 
--- Enable the mouse
+-- enable the mouse
 vim.o.mouse = "a"
 
--- Disable swap files!
+-- disable swap files!
 vim.o.swapfile = false
 
--- Set the color scheme
+-- disable mode indicator since i'm using lualine
+vim.o.showmode = false
+
+-- set the color scheme
 -- vim.cmd("colorscheme everforest")
 require("vitesse").setup({
 	-- Your options
@@ -38,7 +41,7 @@ require("vitesse").setup({
 	italic_comments = false,
 })
 
--- Enable background transparency
+-- enable background transparency
 --vim.cmd([[
 --    highlight Normal guibg=none
 --    highlight NonText guibg=none
@@ -48,7 +51,7 @@ require("vitesse").setup({
 --    highlight NormalNC ctermbg=none
 --]])
 
--- Syntax highlighting for MQL5
+-- syntax highlighting for MQL5
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.mq5",
 	command = "set filetype=cpp",
