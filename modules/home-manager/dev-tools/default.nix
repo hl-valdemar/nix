@@ -20,7 +20,6 @@
     raylib
     raygui
 
-    # docker
-    # docker-compose
+    cloc
   ];
 }
