@@ -56,3 +56,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.mq5",
 	command = "set filetype=cpp",
 })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = "*.mqh",
+	command = "set filetype=cpp",
+})
