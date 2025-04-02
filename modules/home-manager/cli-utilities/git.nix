@@ -5,6 +5,7 @@
     userName = "hl-valdemar";
     extraConfig = {
       pull.rebase = false; # Merge when branches diverge
+      init.defaultBranch = "main";
     };
   };
 }
