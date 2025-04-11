@@ -11,6 +11,7 @@
       "signal"
       "raycast"
       "docker"
+      "sunvox"
     ];
 
     masApps = {

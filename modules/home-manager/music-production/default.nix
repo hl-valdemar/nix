@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    sunvox
-  ];
+  # home.packages = with pkgs; [
+  #   sunvox
+  # ];
 }
