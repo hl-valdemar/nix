@@ -12,6 +12,7 @@
       "raycast"
       "docker"
       "sunvox"
+      "visual-studio-code"
     ];
 
     masApps = {
