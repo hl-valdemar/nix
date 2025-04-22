@@ -1,7 +1,7 @@
 {
   programs.atuin = {
     enable = true;
-    enableBashIntegration = true;
+    # enableBashIntegration = true;
     enableZshIntegration = true;
   };
 }

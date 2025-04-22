@@ -6,7 +6,7 @@
     ./git.nix
     ./ssh.nix
     ./yazi.nix
-    ./zellij.nix
+    #./zellij.nix
     ./zoxide.nix
   ];
 

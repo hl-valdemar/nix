@@ -8,7 +8,7 @@
   programs.zellij = {
     enable = true;
     enableZshIntegration = false;
-    enableBashIntegration = false;
+    # enableBashIntegration = false;
 
     settings = {
       # theme = "everforest-dark";

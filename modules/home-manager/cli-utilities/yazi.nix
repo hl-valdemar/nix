@@ -3,7 +3,7 @@
 
   programs.yazi = {
     enable = true;
-    enableBashIntegration = true;
+    # enableBashIntegration = true;
     enableZshIntegration = true;
 
     # flavors = {
