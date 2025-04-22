@@ -8,6 +8,7 @@
 
     casks = [
       "brave-browser"
+      "firefox"
       "signal"
       "raycast"
       "docker"
