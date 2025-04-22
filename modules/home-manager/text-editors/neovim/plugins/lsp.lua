@@ -76,6 +76,7 @@ require("lspconfig").lua_ls.setup({
 })
 
 require("lspconfig").nixd.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "nixd" },
@@ -100,6 +101,7 @@ require("lspconfig").nixd.setup({
 })
 
 require("lspconfig").gopls.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "gopls" },
@@ -115,6 +117,7 @@ require("lspconfig").zls.setup({
 })
 
 require("lspconfig").rust_analyzer.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	-- settings = {
@@ -127,6 +130,7 @@ require("lspconfig").rust_analyzer.setup({
 })
 
 require("lspconfig").ts_ls.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "typescript.tsx" },
@@ -134,6 +138,7 @@ require("lspconfig").ts_ls.setup({
 })
 
 require("lspconfig").svelte.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "svelteserver", "--stdio" },
@@ -141,6 +146,7 @@ require("lspconfig").svelte.setup({
 })
 
 require("lspconfig").cssls.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "vscode-css-language-server", "--stdio" },
@@ -174,6 +180,7 @@ require("lspconfig").cssls.setup({
 })
 
 require("lspconfig").ruff.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "python" },
@@ -185,6 +192,7 @@ require("lspconfig").ruff.setup({
 })
 
 require("lspconfig").pyright.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "pyright-langserver", "--stdio" },
@@ -212,6 +220,7 @@ require("lspconfig").pyright.setup({
 })
 
 require("lspconfig").clangd.setup({
+	handlers = handlers,
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
