@@ -6,6 +6,7 @@
     libqalculate
     jre
     dotnet-runtime
+    texliveFull
   ];
 
   fonts.packages = with pkgs; [
