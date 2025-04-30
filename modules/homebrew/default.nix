@@ -14,6 +14,7 @@
       "docker"
       "sunvox"
       "visual-studio-code"
+      "wine-stable"
     ];
 
     masApps = {
