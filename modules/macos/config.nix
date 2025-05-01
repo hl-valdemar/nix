@@ -6,7 +6,6 @@
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
         "/Applications/Claude.app"
-        "/Applications/Perplexity.app"
       ];
     };
 
