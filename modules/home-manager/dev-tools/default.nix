@@ -17,6 +17,8 @@
 
     jdk
 
+    deno
+
     raylib
     raygui
 
