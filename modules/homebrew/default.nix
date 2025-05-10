@@ -4,6 +4,7 @@
 
     brews = [
       "mas"
+      "mpv"
     ];
 
     casks = [
