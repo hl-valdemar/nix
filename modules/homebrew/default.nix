@@ -6,7 +6,7 @@
       "mas"
       "mpv"
       "unar"
-      "youtube-dl"
+      "yt-dlp"
     ];
 
     casks = [
