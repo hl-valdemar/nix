@@ -6,6 +6,7 @@
       "mas"
       "mpv"
       "unar"
+      "youtube-dl"
     ];
 
     casks = [
