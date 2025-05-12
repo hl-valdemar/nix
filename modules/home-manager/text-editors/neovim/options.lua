@@ -35,11 +35,11 @@ vim.o.showmode = false
 
 -- set the color scheme
 -- vim.cmd("colorscheme everforest")
-require("vitesse").setup({
-	-- Your options
-	transparent = true,
-	italic_comments = false,
-})
+-- require("vitesse").setup({
+-- 	-- Your options
+-- 	transparent = true,
+-- 	italic_comments = false,
+-- })
 
 -- enable background transparency
 --vim.cmd([[
@@ -107,3 +107,123 @@ vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua _G.toggle_float_term()<CR>",
 
 -- Use Shift+Escape to exit terminal mode
 vim.api.nvim_set_keymap("t", "<S-Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- Configuration
+local poll_interval_ms = 1000 -- Poll once per second
+local previous_os_mode = nil -- Track last detected mode
+
+-- Function to detect macOS appearance
+local function get_os_theme_mode()
+	local cmd = "/usr/bin/defaults read -g AppleInterfaceStyle 2>/dev/null"
+	local output = vim.fn.system(cmd)
+	local success = vim.v.shell_error == 0
+
+	if success and output:match("Dark") then
+		return "dark"
+	else
+		return "light"
+	end
+end
+
+-- Function that only updates the background option
+local function update_background_from_os_theme()
+	-- Add error handling
+	local ok, detected_mode = pcall(get_os_theme_mode)
+	if not ok then
+		vim.notify("Error detecting OS theme: " .. tostring(detected_mode), vim.log.levels.ERROR)
+		return
+	end
+
+	-- Only update if the mode changed
+	if detected_mode ~= previous_os_mode then
+		vim.notify("OS theme changed to " .. detected_mode, vim.log.levels.INFO)
+		vim.o.background = detected_mode
+		previous_os_mode = detected_mode
+	end
+end
+
+-- Initialize on startup
+local ok, initial_mode = pcall(get_os_theme_mode)
+if ok then
+	previous_os_mode = initial_mode
+	vim.o.background = initial_mode
+else
+	vim.notify("Error detecting initial OS theme", vim.log.levels.ERROR)
+end
+
+-- Set up the timer in global scope to prevent garbage collection
+if _G.theme_timer and not _G.theme_timer:is_closing() then
+	_G.theme_timer:close()
+end
+
+_G.theme_timer = vim.loop.new_timer()
+if _G.theme_timer then
+	_G.theme_timer:start(
+		poll_interval_ms,
+		poll_interval_ms,
+		vim.schedule_wrap(function()
+			pcall(update_background_from_os_theme)
+		end)
+	)
+else
+	vim.notify("Failed to create theme polling timer", vim.log.levels.ERROR)
+end
+
+-- User commands for manual control
+vim.api.nvim_create_user_command("SyncOsTheme", function()
+	pcall(update_background_from_os_theme)
+end, {})
+
+vim.api.nvim_create_user_command("StopThemePolling", function()
+	if _G.theme_timer and not _G.theme_timer:is_closing() then
+		_G.theme_timer:close()
+		vim.notify("Theme polling stopped", vim.log.levels.INFO)
+	else
+		vim.notify("Theme polling is not active", vim.log.levels.INFO)
+	end
+end, {})
+
+vim.api.nvim_create_user_command("StartThemePolling", function()
+	if _G.theme_timer and not _G.theme_timer:is_closing() then
+		vim.notify("Theme polling is already active", vim.log.levels.INFO)
+	else
+		_G.theme_timer = vim.loop.new_timer()
+		_G.theme_timer:start(
+			poll_interval_ms,
+			poll_interval_ms,
+			vim.schedule_wrap(function()
+				pcall(update_background_from_os_theme)
+			end)
+		)
+		vim.notify("Theme polling started", vim.log.levels.INFO)
+	end
+end, {})
+
+local function apply_colorscheme()
+	-- Clear existing highlights to prevent bleed-through
+	vim.cmd("hi clear")
+
+	if vim.o.background == "dark" then
+		local vitesse = require("vitesse")
+		vitesse.setup({
+			transparent = true,
+			italic_comments = false,
+		})
+		-- vim.cmd("colorscheme habamax")
+	else
+		-- Light theme
+		vim.cmd("colorscheme everforest")
+	end
+
+	-- Force redraws to ensure complete refresh
+	vim.cmd("redraw!")
+end
+
+-- Then add the autocommand for theme switching separately
+vim.api.nvim_create_autocmd("OptionSet", {
+	pattern = "background",
+	callback = apply_colorscheme,
+})
+
+-- apply the colorscheme on startup
+apply_colorscheme()
