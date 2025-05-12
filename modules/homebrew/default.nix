@@ -18,6 +18,7 @@
       "sunvox"
       "visual-studio-code"
       "wine-stable"
+      "iina" # GOATed media player
     ];
 
     masApps = {
