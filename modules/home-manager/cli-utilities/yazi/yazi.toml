@@ -1,8 +1,5 @@
 [opener]
-play = [{ run = 'iina "$@"', orphan = true, for = "macos" }]
+play = [{ run = 'open -a IINA "$@"', orphan = true, for = "macos" }]
 
 [open]
-prepend_rules = [
-  { mime = "audio/*", use = "play" },
-  { mime = "video/*", use = "play" },
-]
+rules = [{ mime = "audio/*", use = "play" }, { mime = "video/*", use = "play" }]
