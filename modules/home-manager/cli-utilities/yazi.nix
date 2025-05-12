@@ -1,5 +1,5 @@
 {
-  # xdg.configFile."yazi/yazi.toml".source = ./yazi/yazi.toml;
+  xdg.configFile."yazi/yazi.toml".source = ./yazi/yazi.toml;
 
   programs.yazi = {
     enable = true;
