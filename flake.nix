@@ -46,6 +46,8 @@
           echo "Installing Rosetta..." >&2
           softwareupdate --install-rosetta --agree-to-license
         '';
+
+        primaryUser = "valdemar";
       };
 
       users.users.valdemar = {
