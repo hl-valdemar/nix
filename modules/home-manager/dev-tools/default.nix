@@ -23,5 +23,8 @@
     raygui
 
     cloc
+    tokei
+
+    glfw
   ];
 }
