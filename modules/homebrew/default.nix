@@ -7,6 +7,7 @@
       "mpv"
       "unar"
       "yt-dlp"
+      "glfw"
     ];
 
     casks = [

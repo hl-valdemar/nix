@@ -24,7 +24,5 @@
 
     cloc
     tokei
-
-    glfw
   ];
 }
