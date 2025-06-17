@@ -33,6 +33,9 @@ vim.o.swapfile = false
 -- disable mode indicator since i'm using lualine
 vim.o.showmode = false
 
+-- set border style
+vim.o.winborder = "single"
+
 -- set the color scheme
 -- vim.cmd("colorscheme everforest")
 -- require("vitesse").setup({

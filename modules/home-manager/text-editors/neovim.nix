@@ -76,18 +76,18 @@
       #   plugin = lsp_lines-nvim;
       #   config = toLuaFile ./neovim/plugin/lsp-lines.lua;
       # }
-      {
-        plugin = tiny-inline-diagnostic-nvim;
-        config = toLuaFile ./neovim/plugins/tiny-inline-diagnostic.lua;
-      }
+      # {
+      #   plugin = tiny-inline-diagnostic-nvim;
+      #   config = toLuaFile ./neovim/plugins/tiny-inline-diagnostic.lua;
+      # }
       {
         plugin = autoclose-nvim;
         config = toLuaFile ./neovim/plugins/autoclose.lua;
       }
-      {
-        plugin = tabout-nvim;
-        config = toLuaFile ./neovim/plugins/tabout.lua;
-      }
+      # {
+      #   plugin = tabout-nvim;
+      #   config = toLuaFile ./neovim/plugins/tabout.lua;
+      # }
       {
         plugin = conform-nvim;
         config = toLuaFile ./neovim/plugins/conform.lua;
