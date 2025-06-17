@@ -6,7 +6,7 @@ vim.diagnostic.config({
 })
 vim.api.nvim_set_keymap("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
 	local bufmap = function(keys, func)
 		vim.keymap.set("n", keys, func, { buffer = bufnr })
 	end
