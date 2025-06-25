@@ -9,7 +9,7 @@
       ];
       mineffect = "scale";
       show-recents = false;
-      tilesize = 32;
+      tilesize = 48;
     };
 
     # “icnv” = Icon view, “Nlsv” = List view, “clmv” = Column View, “Flwv” = Gallery View
