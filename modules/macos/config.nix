@@ -3,12 +3,12 @@
     dock = {
       autohide = true;
       persistent-apps = [
-        "/System/Applications/Mail.app"
-        "/System/Applications/Calendar.app"
-        "/Applications/Claude.app"
+        {app = "/System/Applications/Mail.app";}
+        {app = "/System/Applications/Calendar.app";}
+        {app = "/Applications/Claude.app";}
       ];
       mineffect = "scale";
-      show-recents = false;
+      show-recents = true;
       tilesize = 48;
     };
 
