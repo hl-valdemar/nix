@@ -61,13 +61,9 @@
       nvim-web-devicons
       vim-nix
       flash-nvim
+      gruvbox-material
+      everforest
 
-      {
-        plugin = gruvbox-material;
-      }
-      {
-        plugin = everforest;
-      }
       {
         plugin = treesj;
         config = toLua "require('treesj').setup()";
@@ -117,30 +113,30 @@
         config = toLuaFile ./neovim/plugins/lualine.lua;
       }
       {
-        plugin = nvim-treesitter.withPlugins (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-vim
-          p.tree-sitter-bash
-          p.tree-sitter-lua
-          p.tree-sitter-python
-          p.tree-sitter-json
-          p.tree-sitter-toml
-          p.tree-sitter-zig
-          p.tree-sitter-go
-          p.tree-sitter-rust
-          p.tree-sitter-typescript
-          p.tree-sitter-javascript
-          p.tree-sitter-svelte
-          p.tree-sitter-yuck
-          p.tree-sitter-typst
-          p.tree-sitter-markdown
-          p.tree-sitter-glsl
-          p.tree-sitter-c
-          p.tree-sitter-cpp
-        ]);
+        plugin = nvim-treesitter.withAllGrammars;
+        # plugin = nvim-treesitter.withPlugins (p: [
+        #   p.nix
+        #   p.vim
+        #   p.bash
+        #   p.lua
+        #   p.python
+        #   p.json
+        #   p.toml
+        #   p.zig
+        #   p.go
+        #   p.rust
+        #   p.typescript
+        #   p.javascript
+        #   p.svelte
+        #   p.yuck
+        #   p.typst
+        #   p.markdown
+        #   p.glsl
+        #   p.c
+        #   p.cpp
+        # ]);
         config = toLuaFile ./neovim/plugins/treesitter.lua;
       }
-
       {
         plugin = fromGitHub "echasnovski/mini.surround" "main" "aa5e245829dd12d8ff0c96ef11da28681d6049aa";
         config = toLuaFile ./neovim/plugins/mini-surround.lua;

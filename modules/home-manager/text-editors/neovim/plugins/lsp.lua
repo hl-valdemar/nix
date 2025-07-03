@@ -42,18 +42,10 @@ local on_attach = function(client, bufnr)
     end, {})
 
     if client.supports_method("textDocument/formatting") then
+        -- auto-format
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
             callback = function()
-                -- organize imports
-                vim.lsp.buf.code_action({
-                    context = {
-                        only = { "source.organizeImports" },
-                    },
-                    apply = true,
-                })
-
-                -- auto-format
                 vim.lsp.buf.format({ bufnr = bufnr, async = false })
             end,
         })

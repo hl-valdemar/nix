@@ -8,6 +8,7 @@
       "unar"
       "yt-dlp"
       "glfw"
+      "pkg-config"
     ];
 
     casks = [
