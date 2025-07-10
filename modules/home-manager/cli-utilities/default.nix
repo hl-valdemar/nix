@@ -15,5 +15,6 @@
     lazygit
     ripgrep
     fd
+    imagemagick
   ];
 }
