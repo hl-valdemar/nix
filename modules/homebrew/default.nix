@@ -9,6 +9,7 @@
       "yt-dlp"
       "glfw"
       "pkg-config"
+      "eye-d3"
     ];
 
     casks = [
