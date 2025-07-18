@@ -22,6 +22,7 @@
       "visual-studio-code"
       "wine-stable"
       "iina" # GOATed media player
+      "keycastr"
     ];
 
     masApps = {
