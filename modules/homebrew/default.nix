@@ -23,6 +23,7 @@
       "wine-stable"
       "iina" # GOATed media player
       "keycastr"
+      "zed"
     ];
 
     masApps = {
