@@ -6,7 +6,6 @@
     ./text-editors
     ./messaging-apps
     ./dev-tools
-    ./pdf-readers
     ./music-production
   ];
 }
