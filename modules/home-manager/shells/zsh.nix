@@ -52,7 +52,7 @@
     #   zinit cdreplay -q
     # '';
 
-    initExtra = ''
+    initContent = ''
       if [[ -f ~/.secrets ]]; then
         source ~/.secrets
       fi

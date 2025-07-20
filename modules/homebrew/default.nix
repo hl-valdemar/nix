@@ -2,6 +2,11 @@
   homebrew = {
     enable = true;
 
+    taps = [
+      # "homebrew/cask-fonts"
+      "homebrew-zathura/zathura"
+    ];
+
     brews = [
       "mas"
       "mpv"
@@ -10,6 +15,8 @@
       "glfw"
       "pkg-config"
       "eye-d3"
+      "zathura"
+      "zathura-pdf-poppler"
     ];
 
     casks = [
