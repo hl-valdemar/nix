@@ -67,6 +67,9 @@
       everforest
       kanagawa-nvim
       kanagawa-paper-nvim
+      miasma-nvim
+      papercolor-theme
+      jellybeans-nvim
 
       {
         plugin = treesj;
