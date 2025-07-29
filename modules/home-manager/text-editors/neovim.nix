@@ -61,8 +61,12 @@
       nvim-web-devicons
       vim-nix
       flash-nvim
+
+      # color schemes
       gruvbox-material
       everforest
+      kanagawa-nvim
+      kanagawa-paper-nvim
 
       {
         plugin = treesj;

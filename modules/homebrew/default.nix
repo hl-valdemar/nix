@@ -4,7 +4,6 @@
 
     taps = [
       # "homebrew/cask-fonts"
-      "homebrew-zathura/zathura"
     ];
 
     brews = [
@@ -15,8 +14,6 @@
       "glfw"
       "pkg-config"
       "eye-d3"
-      "zathura"
-      "zathura-pdf-poppler"
     ];
 
     casks = [
@@ -31,6 +28,7 @@
       "iina" # GOATed media player
       "keycastr"
       "zed"
+      "halloy" # IRC client
     ];
 
     masApps = {
