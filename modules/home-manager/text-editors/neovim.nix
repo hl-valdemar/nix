@@ -149,10 +149,10 @@
         config = toLuaFile ./neovim/plugins/mini-surround.lua;
       }
 
-      (pkgs.vimUtils.buildVimPlugin {
-        name = "vitesse";
-        src = pkgs.writeTextDir "lua/vitesse/init.lua" (builtins.readFile ./neovim/themes/vitesse.lua);
-      })
+      # (pkgs.vimUtils.buildVimPlugin {
+      #   name = "vitesse";
+      #   src = pkgs.writeTextDir "lua/vitesse/init.lua" (builtins.readFile ./neovim/themes/vitesse.lua);
+      # })
     ];
 
     extraLuaConfig = ''

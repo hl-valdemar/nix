@@ -29,6 +29,7 @@
       "keycastr"
       "zed"
       "halloy" # IRC client
+      "flameshot" # bangin' screenshot tool
     ];
 
     masApps = {
