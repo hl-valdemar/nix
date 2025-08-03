@@ -61,7 +61,6 @@
       nvim-web-devicons
       vim-nix
       flash-nvim
-      rainbow_csv
 
       # color schemes
       gruvbox-material
@@ -87,6 +86,10 @@
       {
         plugin = autoclose-nvim;
         config = toLuaFile ./neovim/plugins/autoclose.lua;
+      }
+      {
+        plugin = rainbow_csv;
+        config = toLuaFile ./neovim/plugins/rainbow-csv.lua;
       }
       # {
       #   plugin = tabout-nvim;
