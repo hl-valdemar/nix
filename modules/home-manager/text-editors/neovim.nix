@@ -61,6 +61,7 @@
       nvim-web-devicons
       vim-nix
       flash-nvim
+      rainbow_csv
 
       # color schemes
       gruvbox-material
