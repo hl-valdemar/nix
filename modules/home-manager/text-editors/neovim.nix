@@ -87,10 +87,6 @@
         plugin = autoclose-nvim;
         config = toLuaFile ./neovim/plugins/autoclose.lua;
       }
-      {
-        plugin = rainbow_csv;
-        config = toLuaFile ./neovim/plugins/rainbow-csv.lua;
-      }
       # {
       #   plugin = tabout-nvim;
       #   config = toLuaFile ./neovim/plugins/tabout.lua;
